@@ -1,0 +1,23 @@
+.actionsBtn{
+  display: flex;
+  justify-content: flex-end;
+
+}
+.actionsBtn button{ 
+   margin-left: 0.5rem;
+
+}
+.thAction { 
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 6rem;
+
+}
+.form-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.insetBtn{
+  padding-top: 5px;
+}
