@@ -21,3 +21,16 @@
 .insetBtn{
   padding-top: 5px;
 }
+.form-control{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+#formInsert, #formEdit{
+  width: 25rem;
+
+}
+.btn-send{
+  width: 100%;
+}

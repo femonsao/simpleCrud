@@ -24,7 +24,8 @@ class UserRequest extends FormRequest
     public function rules()
     {
         return [
-            "name"=> 'required'
+            "name"=> 'required',
+            'email' => 'email:rfc,dns|required'
         ];
     }
 }

@@ -52,7 +52,8 @@ class UserController extends Controller
     public function store(UserRequest $request)
     {
         $dataToInsert=$this->objUser->create([
-            'name'=>$request->name
+            'name'=>$request->name,
+            'email'=>$request->email
         ]);
         if($dataToInsert){
             return redirect("");
@@ -94,7 +95,8 @@ class UserController extends Controller
     public function update(UserRequest $request, $id)
     {
        $dataToInsert = $this->objUser->where(['id'=>$id])->update([
-         'name'=>$request->name
+         'name'=>$request->name,
+         'email'=>$request->email
 
        ]);
        if($dataToInsert){
@@ -110,11 +112,10 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        $users = $this->objUser->find($id);
-        $delete = $users->delete();
-        if($delete){
-            return redirect("");
-        }
+       
+        $users = $this->objUser->destroy($id);
+        return($users)? "yes":"no";
+
         
     }
 }

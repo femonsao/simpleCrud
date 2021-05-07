@@ -18,8 +18,9 @@
     <thead class="thead-dark " style="background-color: #2d2424;
       color: white;">
       <tr>
-        <th scope="col">#</th>
+        <th scope="col">Id</th>
         <th scope="col">Nome</th>
+        <th scope="col">E-mail</th>
         <th scope="col " class='thAction'>Ações</th>
       </tr>
     </thead>
@@ -28,6 +29,7 @@
     <tr>
         <th scope="row">{{$users->id}}</th>
         <td>{{$users->name}}</td>
+        <td>{{$users->email}}</td>
         <td class="actionsBtn">
         
           <a href="{{url("user/$users->id/edit")}}">
@@ -35,7 +37,7 @@
           
           </a>
         
-          <a href="{{url("user/$users->id")}}" >
+          <a href="{{url("user/$users->id")}}" class='btn-delete' >
             <button class="btn btn-danger">Excluir</button>
           </a>
         </td>

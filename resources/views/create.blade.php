@@ -21,7 +21,8 @@
 @endif
     @csrf
     <input class="form-control" type="text" name='name' id='name' placeholder="Nome" value="{{$user->name ?? ''}}" required>
-    <input class="btn btn-primary mt-3" type="submit" value="Cadastrar">
+    <input class="form-control  mt-3" type="email" name='email' id='email' placeholder="Email" value="{{$user->email ?? ''}}" required>
+    <input class="btn btn-primary mt-3 btn-send" type="submit" value="Cadastrar">
   </form>
 
 </table>
